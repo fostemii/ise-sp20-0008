@@ -1,4 +1,3 @@
-connexion[swagger-ui]
 pandas
 numpy
 matplotlib
