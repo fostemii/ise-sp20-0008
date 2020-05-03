@@ -1,0 +1,7 @@
+connexion[swagger-ui]
+pandas
+numpy
+matplotlib
+os
+sklearn
+Flask

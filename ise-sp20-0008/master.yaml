@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  version: "1.0.0"
+  title: Solution to Pollution
+  description: SVR models from csv file
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    name: "Michael Foster and Alex Huffine"
+  license:
+    name: Apache
+paths: 
+  /energy/svr/scatter/col/<arg1>/kernel/<arg2>/c/<arg3>:
+    get:
+      tags:
+        - SVR
+      operationId: svm.gen_scatter
+      description: "Performs scatter plot of predictions"
+      responses:
+        '200':
+          description: "Perfoms scatter plot using svr"
+          content:
+            application/json:
+              schema: {}
+
+  /energy/svr/plot/col/<arg1>/kernel/<arg2>/c/<arg3>:
+    get:
+      tags:
+        - SVR
+      operationId: svm.gen_plot
+      description: "Performs plot of predictions against the test values"
+      responses:
+        '200':
+          description: "Perfoms plot using svr"
+          content:
+            application/json:
+              schema: {}
+
+servers:
+  - url: 'http://localhost:8080/EnergyAlternatives'
